@@ -49,6 +49,13 @@ Exit the virtualenv and reactivate it to activate the settings just changed::
     deactivate
     workon eatsmart
 
+Create user in postgre:
+    sudo -u postgres psql
+    
+    CREATE USER username;
+    ALTER USER username SUPERUSER CREATEDB;
+    
+
 Create the Postgres database and run the initial syncdb/migrate::
 
     createdb -E UTF-8 eatsmart
